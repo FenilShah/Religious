@@ -1,11 +1,10 @@
-package controllers;
+package org.devdarshan.controllers;
 
 
+import org.devdarshan.beans.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
-
-import beans.User;
 
 @Controller
 public class SchoolMaster {

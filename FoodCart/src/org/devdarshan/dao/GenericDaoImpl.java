@@ -1,5 +1,7 @@
-package dao;
+package org.devdarshan.dao;
 
+
+import java.io.Serializable;
 
 import org.hibernate.Criteria;
 import org.hibernate.Session;
@@ -65,6 +67,12 @@ public class GenericDaoImpl<T> implements GenericDao<T> {
 	@Override
 	public Criteria findByCriteria(T t){
 		return getSession().createCriteria(t.getClass());
+	}
+
+	@Override
+	public Object findById(T t,Integer id) {
+		// TODO Auto-generated method stub
+		return getSession().load(t.getClass(), id);
 	}
 
 }

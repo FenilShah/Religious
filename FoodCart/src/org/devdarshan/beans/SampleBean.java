@@ -1,4 +1,4 @@
-package beans;
+package org.devdarshan.beans;
 //import org.hibernate.annotations.*;;
 import javax.persistence.Column;
 import javax.persistence.Entity;

@@ -28,10 +28,10 @@
 
 <div class="main-container">
 		<nav class="main-nav">
-			<!-- <div id="logo" class="left"><img src="images/dev3.png"></div> -->
-			<div id="logo" class="left">Flip Turn</div>
+			<div id="logo" class="left"><img src="images/dev3.png"></div>
+			<!-- <div id="logo" class="left">Flip Turn</div> -->
 			<ul class="nav right center-text">
-				<li class="btn ${empty linkId?'active':''}"><a href="Index.jsp">Home</a></li>
+				<li class="btn ${empty linkId?'active':''}"><a href="index.htm">Home</a></li>
 				<li class="btn ${linkId eq 'aboutLink'?'active':''}"><a href="about.htm">About</a></li>
 				<li class="btn ${linkId eq 'awardsLink'?'active':''}"><a href="awards.htm">Awards</a></li>				
 				<li class="btn ${linkId eq 'contactLink'?'active':''}"><a href="contact.htm">Contact</a></li>

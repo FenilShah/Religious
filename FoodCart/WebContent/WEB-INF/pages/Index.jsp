@@ -10,7 +10,7 @@
 		<div id="portfolio-content" class="center-text">
 			<div class="portfolio-page" id="page-1">
 				<div class="portfolio-group">
-					<a class="portfolio-item" href="images/1-large.jpg">
+					<a class="portfolio-item" href="#">
 						<img src="images/1-small.jpg" alt="image 1">
 						<div class="detail">
 							<h3>Wavy Road</h3>
@@ -20,7 +20,7 @@
 					</a>				
 				</div>
 				<div class="portfolio-group">
-					<a class="portfolio-item" href="images/2-large.jpg">
+					<a class="portfolio-item" href="#">
 						<img src="images/2-small.jpg" alt="image 2">
 						<div class="detail">
 							<h3>Rocky Mountain</h3>
@@ -30,7 +30,7 @@
 					</a>				
 				</div>
 				<div class="portfolio-group">
-					<a class="portfolio-item" href="images/3-large.jpg">
+					<a class="portfolio-item" href="#">
 						<img src="images/3-small.jpg" alt="image 3">
 						<div class="detail">
 							<h3>Clear River</h3>
@@ -40,7 +40,7 @@
 					</a>				
 				</div>
 				<div class="portfolio-group">
-					<a class="portfolio-item" href="images/4-large.jpg">
+					<a class="portfolio-item" href="#">
 						<img src="images/4-small.jpg" alt="image 4">
 						<div class="detail">
 							<h3>Rounded Flower</h3>
@@ -50,7 +50,7 @@
 					</a>				
 				</div>
 				<div class="portfolio-group">
-					<a class="portfolio-item" href="images/5-large.jpg">
+					<a class="portfolio-item" href="#">
 						<img src="images/5-small.jpg" alt="image 5">
 						<div class="detail">
 							<h3>Bustling City</h3>
@@ -60,7 +60,7 @@
 					</a>				
 				</div>
 				<div class="portfolio-group">
-					<a class="portfolio-item" href="images/6-large.jpg">
+					<a class="portfolio-item" href="#">
 						<img src="images/6-small.jpg" alt="image 6">
 						<div class="detail">
 							<h3>Retired Leaves</h3>
@@ -70,7 +70,7 @@
 					</a>				
 				</div>
 				<div class="portfolio-group">
-					<a class="portfolio-item" href="images/7-large.jpg">
+					<a class="portfolio-item" href="#">
 						<img src="images/7-small.jpg" alt="image 7">
 						<div class="detail">
 							<h3>Clean Design</h3>
@@ -80,7 +80,7 @@
 					</a>				
 				</div>
 				<div class="portfolio-group">
-					<a class="portfolio-item" href="images/8-large.jpg">
+					<a class="portfolio-item" href="#">
 						<img src="images/8-small.jpg" alt="image 8">
 						<div class="detail">
 							<h3>Rock Solid</h3>
@@ -92,7 +92,7 @@
 			</div>
 			<div class="portfolio-page" id="page-2" style="display:none;">
 				<div class="portfolio-group">
-					<a class="portfolio-item" href="images/8-large.jpg">
+					<a class="portfolio-item" href="#">
 						<img src="images/8-small.jpg" alt="image 8">
 						<div class="detail">
 							<h3>Wavy Road</h3>
@@ -102,7 +102,7 @@
 					</a>				
 				</div>
 				<div class="portfolio-group">
-					<a class="portfolio-item" href="images/7-large.jpg">
+					<a class="portfolio-item" href="#">
 						<img src="images/7-small.jpg" alt="image 7">
 						<div class="detail">
 							<h3>Rocky Mountain</h3>
@@ -269,19 +269,22 @@
 	<script type="text/javascript">
 		$(function () {
 			$('.pagination li').click(changePage);
-			$('.portfolio-item').magnificPopup({ 
+			/* $('.portfolio-item').magnificPopup({ 
 				type: 'image',
 				gallery:{
 					enabled:true
 				}
+			}); */
+			$('.portfolio-item').click(function(){
+				window.location.href = "detailsFrame.htm";
 			});
-			
-			$.ajax( { 
+			$.ajax({ 
 				  url: '//freegeoip.net/json/', 
 				  type: 'POST', 
 				  dataType: 'jsonp',
-				  success: function(location) {
-				    // example where I update content on the page.
+				  success: function(location){
+				    //example where I update content on the page.
+				    //alert(JSON.stringify(location));
 				    alert(location.city);
 				    
 				    /* jQuery('#city').html(location.city);
@@ -295,7 +298,7 @@
 				    jQuery('#country-name').html(location.country_name);
 				    jQuery('#country-code').html(location.country_code);
  */				  }
-				} );
+				});
 
 		});
 	</script>	

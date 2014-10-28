@@ -1,4 +1,4 @@
-package beans;
+package org.devdarshan.beans;
 
 import java.sql.Timestamp;
 

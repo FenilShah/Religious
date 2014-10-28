@@ -1,4 +1,4 @@
-<jsp:include page="../../Header.jsp"></jsp:include>
+<jsp:include page="Header.jsp"></jsp:include>
 
 		<div class="content-container">
 			<header>
@@ -34,4 +34,4 @@
 	<script type="text/javascript">
 	loadScript();
 	</script>
-<jsp:include page="../../Footer.jsp"></jsp:include>
+<jsp:include page="Footer.jsp"></jsp:include>

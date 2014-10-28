@@ -1,4 +1,4 @@
-package controllers;
+package org.devdarshan.controllers;
 
 import java.io.IOException;
 import javax.servlet.ServletException;

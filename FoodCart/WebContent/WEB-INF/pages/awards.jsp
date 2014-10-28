@@ -1,4 +1,4 @@
-<jsp:include page="../../Header.jsp"></jsp:include>
+<jsp:include page="Header.jsp"></jsp:include>
 	
 		<div class="content-container">
 			<header id="awards">
@@ -60,4 +60,4 @@
 			</div>
 		</div> <!-- /.content-container -->		
 		
-<jsp:include page="../../Footer.jsp"></jsp:include>
+<jsp:include page="Footer.jsp"></jsp:include>
