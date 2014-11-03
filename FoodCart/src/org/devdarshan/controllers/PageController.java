@@ -1,8 +1,6 @@
 package org.devdarshan.controllers;
 
-import org.devdarshan.beans.City;
-import org.devdarshan.beans.Derasar;
-import org.devdarshan.dao.CityDao;
+import org.devdarshan.service.PageServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,12 +8,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class PageController {
+	
 	@Autowired
-	CityDao cityDao;
+	PageServices pageServices;
 	
 	@RequestMapping("index")
 	public String homePage(Model model){
 		//model.addAttribute("linkId", "aboutLink");
+		pageServices.homePageDerasars(model);
 		return "Index";
 	}
 	
@@ -44,11 +44,7 @@ public class PageController {
 	
 	@RequestMapping("detailsFrame")
 	public String detailFramePage(Model model){
-		City city = cityDao.findById(1);
-		System.out.println(city.getCityName());
-		for(Derasar derasar : city.getDerasarList()){
-			System.out.println("Derasar name " + derasar.getDerasarName());
-		}
+		
 		return "DetailFrame";
 	}
 }
