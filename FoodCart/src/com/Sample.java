@@ -4,6 +4,11 @@ import java.sql.*;
 
 
 public class Sample {
+	
+	public void run(){
+		System.out.println("Hi");
+	}
+	
 
 	public static void main(String[] arg)
 	{

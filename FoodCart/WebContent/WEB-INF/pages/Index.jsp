@@ -20,7 +20,7 @@
 			<c:choose>
 				<c:when test="${(counter.index+1)/8 eq 1}">
 							<div class="portfolio-group">
-								<a class="portfolio-item" href="#"> 
+								<a class="portfolio-item" href="#" data-derasarId="${derasar.derasarId}"> 
 									<img src="images/${derasar.imagePath}" alt="image 1">
 									<div class="detail">
 										<h3>${derasar.derasarName}</h3>
@@ -37,7 +37,7 @@
 				</c:when>
 				<c:otherwise>
 							<div class="portfolio-group">
-								<a class="portfolio-item" href="#"> 
+								<a class="portfolio-item" href="#" data-derasarId="${derasar.derasarId}"> 
 									<img src="images/${derasar.imagePath}" alt="image 1">
 									<div class="detail">
 										<h3>${derasar.derasarName}</h3>
@@ -78,9 +78,10 @@
 				}
 			}); */
 			$('.portfolio-item').click(function(){
-				window.location.href = "detailsFrame.htm";
+				//alert();
+				window.location.href = "detailsFrame.htm?id=" + $(this).attr('data-derasarId');
 			});
-			/* $.ajax({ 
+			/*  $.ajax({ 
 				  url: '//freegeoip.net/json/', 
 				  type: 'POST', 
 				  dataType: 'jsonp',
@@ -100,7 +101,7 @@
 				    jQuery('#country-name').html(location.country_name);
 				    jQuery('#country-code').html(location.country_code);
  				  }
-				}); */
+				});  */
 
 		});
 	</script>
